@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+	.container
+		.row
+			.col-md-8
+				img(src="#{photo.url}", alt="#{photo.name}", width="800", height="600")
+			.col-md-4
+				dl.dl-horizontal
+					dt 照片名称
+					dd= photo.name
+					dt 照片大小
+					dd= photo.size
+					dt 拍摄日期
+					dd= photo.recordDate		
+					dt 照片说明
+					dd= photo.description				

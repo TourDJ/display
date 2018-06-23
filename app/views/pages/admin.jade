@@ -1,0 +1,30 @@
+extends ../layout
+
+block content
+	.container
+		.row
+			form.form-horizontal(method="post", action="/admin/photo/new")
+				input(type="hidden", name="photo[_id]", value="#{photo._id}")
+				.form-group
+					label.col-sm-2.control-lable(for="inputTitle") 照片名称
+					.col-sm-10
+						input#inputTitle.form-control(type="text", name="photo[name]", value="#{photo.name}")
+				.form-group
+					label.col-sm-2.control-lable(for="inputUrl") 照片地址
+					.col-sm-10
+						input#inputUrl.form-control(type="text", name="photo[url]", value="#{photo.url}")							
+				.form-group
+					label.col-sm-2.control-lable(for="inputSize") 照片大小
+					.col-sm-10
+						input#inputSize.form-control(type="text", name="photo[size]", value="#{photo.size}")
+				.form-group
+					label.col-sm-2.control-lable(for="inputRecord") 拍摄日期
+					.col-sm-10
+						input#inputRecord.form-control(type="text", name="photo[recordDate]", value="#{photo.recordDate}")
+				.form-group
+					label.col-sm-2.control-lable(for="inputDesc") 照片说明
+					.col-sm-10
+						textarea#inputDesc.form-control(rows="4", name="photo[description]")= photo.description
+				.form-group
+					.col-sm-offset-2.col-sm-10
+						button.btn.btn-primary(type="submit") 录入

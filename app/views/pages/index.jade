@@ -1,0 +1,19 @@
+extends ../layout
+
+block css
+	style.
+		.thumbnail {
+			text-align: center;
+		}
+
+block content
+	.container
+		.row
+			each item in photos
+				.col-md-2
+					.thumbnail
+						a(href="/photo/#{item._id}")
+							img(src="photo/#{item.url}", alt="#{item.name}")
+						.caption
+							h5 #{item.name}
+							p: a.btn.btn-primary(href="/photo/#{item._id}" role="button" align="center") 查看详情

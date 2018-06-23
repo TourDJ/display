@@ -1,0 +1,35 @@
+{
+  "name": "display",
+  "version": "1.0.0",
+  "description": "A system to display personal pictures.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/TourDJ/display.git"
+  },
+  "keywords": [
+    "display"
+  ],
+  "author": "ivan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TourDJ/display/issues"
+  },
+  "homepage": "https://github.com/TourDJ/display#readme",
+  "dependencies": {
+    "bcrypt": "^2.0.1",
+    "connect-mongo": "^2.0.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "jade": "^1.11.0",
+    "moment": "^2.22.2",
+    "mongoose": "^5.1.6",
+    "morgan": "^1.9.0",
+    "underscore": "^1.9.1"
+  }
+}

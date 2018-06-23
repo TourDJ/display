@@ -1,0 +1,33 @@
+doctype
+html
+	head
+		meta(charset="utf-8")
+		title #{title}
+		include ./includes/head
+		style.
+			.outter{
+				margin-top: 50px;
+			}
+
+			.logo{
+				height: 40px;
+				padding-top: 5px;
+				font-family: "Nimbus Mono L";
+				font-size: 22px;
+				color: #337AB7;
+			}
+
+			a.nav-list {
+				margin: 0 20px;
+				font-size: 18px;
+			}
+
+			a.navbar-brand {
+				font-weight: bolder;
+			}
+		block css
+	body
+		include ./includes/header
+		block content
+		block js
+		include ./includes/footer
